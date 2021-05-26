@@ -11,8 +11,6 @@
 // @namespace    https://github.com/majdhari
 // ==/UserScript==
 
-
-
 let script = document.createElement("script");
 script.textContent = "(" + (function() {
 	"use strict";
@@ -68,41 +66,41 @@ script.textContent = "(" + (function() {
 	(function () { // navigator
 		let a;
 		let fakeNavigator = {};
-	//	fakeNavigator.appCodeName						=
-	//	fakeNavigator.appName							=
-	//	fakeNavigator.appVersion						=
-	//	fakeNavigator.platform							=
+		fakeNavigator.appCodeName						=
+		fakeNavigator.appName							=
+		fakeNavigator.appVersion						=
+		fakeNavigator.platform							=
 		fakeNavigator.product							=
 		fakeNavigator.productSub						=
-	//	fakeNavigator.userAgent							=
+		fakeNavigator.userAgent							=
 		fakeNavigator.vendor							=
 		fakeNavigator.vendorSub							=
 		a = "";
-		fakeNavigator.deviceMemory						=
+		fakeNavigator.deviceMemory						= 5;
 		fakeNavigator.hardwareConcurrency				=
 		fakeNavigator.maxTouchPoints					=
 		a = 0;
 		fakeNavigator.bluetooth							=
 		fakeNavigator.clipboard							=
 		fakeNavigator.connection						=
-	//	fakeNavigator.cookieEnabled						=
+		fakeNavigator.cookieEnabled						=
 		fakeNavigator.credentials						=
 		fakeNavigator.doNotTrack						=
 		fakeNavigator.geolocation						=
 		fakeNavigator.keyboard							=
-		fakeNavigator.language							=
+		fakeNavigator.language							= 
 		fakeNavigator.languages							=
 		fakeNavigator.locks								=
 		fakeNavigator.mediaCapabilities					=
 		fakeNavigator.mediaDevices						=
 		fakeNavigator.mediaSession						=
-	//	fakeNavigator.mimeTypes							=
+		fakeNavigator.mimeTypes							=
 		fakeNavigator.onLine							=
 		fakeNavigator.permissions						=
 		fakeNavigator.presentation						=
 		fakeNavigator.scheduling						=
 		fakeNavigator.serviceWorker						=
-	//	fakeNavigator.storage							=
+		fakeNavigator.storage							=
 		fakeNavigator.usb								=
 		fakeNavigator.userActivation					=
 		fakeNavigator.userAgentData						=
@@ -112,8 +110,8 @@ script.textContent = "(" + (function() {
 		fakeNavigator.xr								=
 		a = {};
 		fakeNavigator.hardwareConcurrency				= 4;
-		fakeNavigator.deviceMemory						= "undefined";
-	//	fakeNavigator.platform 							= "Win32";
+		fakeNavigator.deviceMemory						= 5;
+		fakeNavigator.platform 							= "Win32";
 		fakeNavigator.plugins							= [];
 		setValue(fakeNavigator.plugins, "item",			function item() { return null; },		false);
 		setValue(fakeNavigator.plugins, "namedItem",	function namedItem() { return null; },	false);
@@ -197,7 +195,6 @@ script.textContent = "(" + (function() {
 		};
 		window.AudioBuffer.prototype.getChannelData.toString = origGetChannelData.toString.bind(origGetChannelData);
 	})();
-	(function () { // Canvas
 		let origGetContext		= HTMLCanvasElement.prototype.getContext;
 		let origGetImageData	= CanvasRenderingContext2D.prototype.getImageData;
 		let origReadPixels1		= WebGLRenderingContext.prototype.readPixels;
