@@ -195,6 +195,24 @@ script.textContent = "(" + (function() {
 		};
 		window.AudioBuffer.prototype.getChannelData.toString = origGetChannelData.toString.bind(origGetChannelData);
 	})();
+	
+	
+	(function () { // userAgent
+	
+	
+	alert(window.navigator.userAgent)
+// alerts "Mozilla/5.0 (Windows; U; Win98; en-US; rv:0.9.2) Gecko/20010725 Netscape6/6.1"
+	
+	})();
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	(function () { // Canvas
 		let origGetContext		= HTMLCanvasElement.prototype.getContext;
 		let origGetImageData	= CanvasRenderingContext2D.prototype.getImageData;
