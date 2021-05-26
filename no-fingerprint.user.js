@@ -195,6 +195,7 @@ script.textContent = "(" + (function() {
 		};
 		window.AudioBuffer.prototype.getChannelData.toString = origGetChannelData.toString.bind(origGetChannelData);
 	})();
+	(function () { // Canvas
 		let origGetContext		= HTMLCanvasElement.prototype.getContext;
 		let origGetImageData	= CanvasRenderingContext2D.prototype.getImageData;
 		let origReadPixels1		= WebGLRenderingContext.prototype.readPixels;
