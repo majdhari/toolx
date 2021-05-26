@@ -1,0 +1,24 @@
+{
+	"manifest_version": 2,
+	"short_name": "no-fingerprint",
+	"version": "0.2",
+	"name": "No Fingerprint",
+	"description": "Block browser fingerprinting attempts.",
+	"homepage_url": "https://github.com/majdhari/toolx",
+	"icons": {
+		"1000": "No Fingerprint.png"
+	},
+	"browser_action": {
+	  "default_icon": {
+		"1000": "No Fingerprint.png"
+	  }
+	},
+	"permissions": [],
+	"content_scripts": [{
+		"all_frames": true,
+		"match_about_blank": true,
+		"run_at": "document_start",
+		"matches": [ "*://*/*" ],
+		"js": [ "no-fingerprint.user.js" ]
+	}]
+}
